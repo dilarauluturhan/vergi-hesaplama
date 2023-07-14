@@ -24,11 +24,11 @@
       <div class="container mx-auto mt-5">
         <p class="text-grayTax text-xl">Vergi Oranını Seçiniz..</p>
         <div
-          class="grid grid-cols-4 divide-x-2 divide-orangeTax border rounded-md border-solid border-orangeTax text-center text-lg text-orangeTax mt-2">
-          <div class="hover:text-white hover:bg-orangeTax transition-duration-700">%1</div>
-          <div class="hover:text-white hover:bg-orangeTax transition-duration-700">%8</div>
-          <div class="hover:text-white hover:bg-orangeTax transition-duration-700">%18</div>
-          <div class="hover:text-white hover:bg-orangeTax transition-duration-700">Yüzde Gir</div>
+          class="grid grid-cols-4 divide-x-2 divide-orangeTax border rounded-md border-solid border-orangeTax text-center text-lg text-orangeTax mt-2 cursor-pointer">
+          <div class="hover:text-white hover:bg-orangeTax transition-duration-700" id="rate_1">%1</div>
+          <div class="hover:text-white hover:bg-orangeTax transition-duration-700" id="rate_8">%8</div>
+          <div class="hover:text-white hover:bg-orangeTax transition-duration-700" id="rate_18">%18</div>
+          <div class="hover:text-white hover:bg-orangeTax transition-duration-700" id="rateRandom">Yüzde Gir</div>
         </div>
       </div>
     </section>
@@ -37,11 +37,11 @@
       <form>
         <div class="container mx-auto flex items-center justify-between mt-5">
           <p class="text-grayTax text-xl">Vergi Oranı:</p>
-          <input class="bg-white w-4/5 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm" type="number">
+          <input class="bg-white w-4/5 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm" type="text" id="rateInput">
         </div>
         <div class="container mx-auto flex items-center justify-between mt-5">
           <p class="text-grayTax text-xl ml-12">Tutar:</p>
-          <input class="bg-white w-4/5 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm" type="number">
+          <input class="bg-white w-4/5 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm" type="text" id="priceInput">
         </div>
       </form>
     </section>
@@ -49,9 +49,9 @@
     <section>
       <div class="container mx-auto flex items-center justify-between mt-5">
         <div
-          class="grid grid-cols-2 divide-x-2 divide-blueTax border rounded-md border-solid border-blueTax text-center text-lg text-blueTax w-full">
-          <div class="hover:text-white hover:bg-blueTax transition-duration-700">Vergi Dahil</div>
-          <div class="hover:text-white hover:bg-blueTax transition-duration-700">Vergi Hariç</div>
+          class="grid grid-cols-2 divide-x-2 divide-blueTax border rounded-md border-solid border-blueTax text-center text-lg text-blueTax w-full cursor-pointer">
+          <div class="hover:text-white hover:bg-blueTax transition-duration-700" id="taxInclude">Vergi Dahil</div>
+          <div class="hover:text-white hover:bg-blueTax transition-duration-700" id="taxExcept">Vergi Hariç</div>
         </div>
       </div>
     </section>
@@ -61,15 +61,15 @@
         <div class="text-white text-xl pt-12 pb-12">
           <div class="grid grid-cols-2 space-x-96 mb-4">
             <p class="pl-16">Ara Toplam:</p>
-            <p class="text-end">₺0,00</p>
+            <p class="text-end" id="subTotal">₺0,00</p>
           </div>
           <div class="grid grid-cols-2 space-x-96 mb-4">
             <p class="pl-16">Vergi:</p>
-            <p class="text-end">₺0,00</p>
+            <p class="text-end" id="taxTotal">₺0,00</p>
           </div>
           <div class="grid grid-cols-2 space-x-96 mb-1">
             <p class="pl-16">Genel Toplam:</p>
-            <p class="text-end">₺0,00</p>
+            <p class="text-end" id="total">₺0,00</p>
           </div>
         </div>
       </div>
